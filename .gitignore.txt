@@ -1,0 +1,14 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files (for sensitive info)
+.env
+
+# System-specific files
+.vscode/
+.DS_Store
+Thumbs.db

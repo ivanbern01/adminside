@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  height: 100vh;  /* Make the app full height */
+  background-color: #f4f4f4; /* Optional: change background color */
+}
+
+.main-content {
+  flex-grow: 1;  /* This makes the content area take up the remaining space */
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: auto;  /* Allow scrolling if the content overflows */
+}
