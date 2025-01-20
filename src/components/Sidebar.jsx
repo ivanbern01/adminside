@@ -50,6 +50,15 @@ const Sidebar = () => {
         >
           &nbsp;&nbsp;• Create Teacher
         </NavLink>
+        {/* Teacher Schedule Link */}
+        <NavLink
+          to="/teachers/schedule"
+          className={({ isActive }) =>
+            isActive ? `${styles.subNavLink} ${styles.active}` : styles.subNavLink
+          }
+        >
+          &nbsp;&nbsp;• Teacher Schedule
+        </NavLink>
       </div>
 
       {/* Students Section */}
@@ -71,6 +80,24 @@ const Sidebar = () => {
           }
         >
           &nbsp;&nbsp;• Create Student
+        </NavLink>
+        {/* Student Admission Link */}
+        <NavLink
+          to="/students/admission"
+          className={({ isActive }) =>
+            isActive ? `${styles.subNavLink} ${styles.active}` : styles.subNavLink
+          }
+        >
+          &nbsp;&nbsp;• Student Admission
+        </NavLink>
+        {/* Student Schedule Link */}
+        <NavLink
+          to="/students/schedule"
+          className={({ isActive }) =>
+            isActive ? `${styles.subNavLink} ${styles.active}` : styles.subNavLink
+          }
+        >
+          &nbsp;&nbsp;• Student Schedule
         </NavLink>
       </div>
 

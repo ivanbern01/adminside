@@ -1,20 +1,38 @@
-.uploadedDocumentsContainer {
-    margin-top: 20px;
-  }
-  
-  .cardHeader {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .headerTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-  }
-  
-  .table {
-    margin-top: 10px;
-  }
-  
+.studentAdmissionContainer {
+  padding: 20px;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.cardHeader {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 14px;
+}
+
+.actionButton {
+  margin-right: 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
