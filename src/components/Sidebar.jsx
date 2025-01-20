@@ -6,8 +6,8 @@ import {
   FaGraduationCap,
   FaClipboardList,
   FaBullhorn,
-  FaChalkboardTeacher, // Import teacher icon
-  FaSignOutAlt, // Import logout icon
+  FaChalkboardTeacher,
+  FaSignOutAlt,
 } from "react-icons/fa";
 
 const Sidebar = () => {
@@ -15,7 +15,7 @@ const Sidebar = () => {
     <div className={styles.sidebar}>
       {/* Logo and Admin Dashboard Title */}
       <div className={styles.logoContainer}>
-        <img src="src/assets/cvsu.png" alt="Logo" className={styles.logo} /> {/* Update logo path */}
+        <img src="src/assets/cvsu.png" alt="Logo" className={styles.logo} />
         <h2 className={styles.dashboardTitle}>Admin Dashboard</h2>
       </div>
 
@@ -29,33 +29,63 @@ const Sidebar = () => {
         <FaHome className={styles.icon} />
         Home
       </NavLink>
+
+      {/* Teachers Section */}
+      <div className={styles.navGroup}>
+        <NavLink
+          to="/teachers"
+          className={({ isActive }) =>
+            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+          }
+        >
+          <FaChalkboardTeacher className={styles.icon} />
+          Teachers
+        </NavLink>
+        {/* Create Teacher Link */}
+        <NavLink
+          to="/teachers/create"
+          className={({ isActive }) =>
+            isActive ? `${styles.subNavLink} ${styles.active}` : styles.subNavLink
+          }
+        >
+          &nbsp;&nbsp;• Create Teacher
+        </NavLink>
+      </div>
+
+      {/* Students Section */}
+      <div className={styles.navGroup}>
+        <NavLink
+          to="/students"
+          className={({ isActive }) =>
+            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+          }
+        >
+          <FaGraduationCap className={styles.icon} />
+          Students
+        </NavLink>
+        {/* Create Student Link */}
+        <NavLink
+          to="/students/create"
+          className={({ isActive }) =>
+            isActive ? `${styles.subNavLink} ${styles.active}` : styles.subNavLink
+          }
+        >
+          &nbsp;&nbsp;• Create Student
+        </NavLink>
+      </div>
+
+      {/* Uploaded Documents */}
       <NavLink
-        to="/teachers"
-        className={({ isActive }) =>
-          isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-        }
-      >
-        <FaChalkboardTeacher className={styles.icon} />
-        Teachers
-      </NavLink>
-      <NavLink
-        to="/students"
-        className={({ isActive }) =>
-          isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-        }
-      >
-        <FaGraduationCap className={styles.icon} />
-        Students
-      </NavLink>
-      <NavLink
-        to="/masterlist"
+        to="/uploaded-documents"
         className={({ isActive }) =>
           isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
         }
       >
         <FaClipboardList className={styles.icon} />
-        Masterlist
+        Uploaded Documents
       </NavLink>
+
+      {/* Announcement */}
       <NavLink
         to="/announcement"
         className={({ isActive }) =>
