@@ -7,6 +7,7 @@ import {
   FaClipboardList,
   FaBullhorn,
   FaChalkboardTeacher, // Import teacher icon
+  FaSignOutAlt, // Import logout icon
 } from "react-icons/fa";
 
 const Sidebar = () => {
@@ -64,6 +65,12 @@ const Sidebar = () => {
         <FaBullhorn className={styles.icon} />
         Announcement
       </NavLink>
+
+      {/* Log Out Button */}
+      <button className={styles.logoutButton}>
+        <FaSignOutAlt className={styles.icon} />
+        Log Out
+      </button>
     </div>
   );
 };
