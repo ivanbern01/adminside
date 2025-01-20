@@ -1,7 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Sidebar.module.css";
-import { FaHome, FaGraduationCap, FaClipboardList } from "react-icons/fa"; // Import icons
+import {
+  FaHome,
+  FaGraduationCap,
+  FaClipboardList,
+  FaBullhorn,
+  FaChalkboardTeacher, // Import teacher icon
+} from "react-icons/fa";
 
 const Sidebar = () => {
   return (
@@ -23,6 +29,15 @@ const Sidebar = () => {
         Home
       </NavLink>
       <NavLink
+        to="/teachers"
+        className={({ isActive }) =>
+          isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+        }
+      >
+        <FaChalkboardTeacher className={styles.icon} />
+        Teachers
+      </NavLink>
+      <NavLink
         to="/students"
         className={({ isActive }) =>
           isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
@@ -39,6 +54,15 @@ const Sidebar = () => {
       >
         <FaClipboardList className={styles.icon} />
         Masterlist
+      </NavLink>
+      <NavLink
+        to="/announcement"
+        className={({ isActive }) =>
+          isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+        }
+      >
+        <FaBullhorn className={styles.icon} />
+        Announcement
       </NavLink>
     </div>
   );
